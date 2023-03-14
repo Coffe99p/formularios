@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<style>
+
+body
+{
+    background-color: #67fac9;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    flex-direction: column;
+}
+
+.botao:hover
+{
+    background-color: #67fac9;
+    color: #000000;
+
+}
+.caixa_larga
+{
+    width: 610px;
+    font-size: 14px;
+    box-shadow: 1px 1px black;
+}
+
+.caixa_larga2
+{
+    font-size: 14px;
+    box-shadow: 1px 1px black;
+    width: 600px;
+}
+.estado
+{
+    box-shadow: 1px 1px black;
+}
+
+.texto
+{
+    width: 330px;
+    height: 20vh;
+    font-size: 12px;
+}
+
+.botao
+{
+    box-shadow: 1px 1px black;
+}
+
+.borda
+{
+border-style: solid;
+border-color: rgb(48, 43, 43);
+border-width: 10px;
+background-color: #ffffff;
+}
+
+
+</style>
+
+<body>
+    <!-- Formulario -->
+    <fieldset class="borda">
+        <fieldset>
+
+        <legend> Dados pessoais</legend>
+        Nome: <input type="text" class="caixa_larga2" id="nome">
+        <br> <br>
+        CEP: <input type="text" class="caixa_larga" id="CEP">
+        <br> <br>
+        Estado: <select id="estado" class="estado">
+            <option selected> SC </option>
+             <option> SP </option>
+              <option> RS </option>
+               <option> RJ </option>
+                <option> BH </option>
+        </select>
+    </fieldset>
+    <br> 
+    <fieldset>
+        <LEGEnd> Dados Profissa </LEGEnd> 
+            <input type="radio" class="cargos" id="gerencia" name="cargos"> Gerencia
+            <input type="radio" class="cargos" id="Financeiro" name="cargos"> Financeiro
+            <input type="radio" class="cargos" id="Recepecao" name="cargos"> Recepecao 
+            <input type="radio" class="cargos" id="ADM" name="cargos"> ADM
+            <input type="radio" class="cargos" id="Juridico" name="cargos"> Juridico 
+    <br> <br>
+        <Legend>Area De Interesse</legend>
+            <input type="checkbox" class="areas" id="computacao"> computacao
+            <input type="checkbox" class="areas" id="Biologia"> Biologia 
+            <input type="checkbox" class="areas" id="Meioambiente"> Meio azmbiente
+            <input type="checkbox" class="areas" id="Engenharia"> Engenharia
+            <input type="checkbox" class="areas" id="Historia">Historia
+    <br> <br>
+    <legend>Mini curriculo <a href="https://pintos.com.br/" target="_blank" > (ajuda) </a> </legend>
+    
+            <textarea class="texto" id="curriculo"></textarea>
+        
+    </fieldset>
+    <br>       
+        <div class="botoes">
+            <button class="botao"> Enviar</button>
+            <button onclick="limpatudo();" class="botao"> Limpar</button>
+        </div>
+</fieldset>
+
+</body>
+    <script>
+        function limpatudo()
+        {
+            //Lentras
+            nome.value = "";
+            CEP.value = "";
+            curriculo.value = "";
+            //caixas
+            gerencia.checked = false;
+            Financeiro.checked = false;
+            Recepecao.checked = false;
+            ADM.checked = false;
+            Juridico.checked = false;
+            computacao.checked = false;
+            Biologia.checked = false;
+            Meioambiente.checked = false;
+            Engenharia.checked = false;
+            Historia.checked = false;
+
+        }
+    </script>
+</html>
