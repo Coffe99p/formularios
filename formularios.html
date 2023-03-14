@@ -64,10 +64,25 @@ border-width: 10px;
 background-color: #ffffff;
 }
 
+.cubo
+{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(128, 36, 36);
+    animation: vai_vai 10s;
+}
+@keyframes vai_vai{
+
+    0%{margin-left:-650px;}
+    100%{margin-left:600px;}
+}
+
 
 </style>
 
 <body>
+    <div class="cubo"></div>
+    
     <!-- Formulario -->
     <fieldset class="borda">
         <fieldset>
@@ -114,6 +129,8 @@ background-color: #ffffff;
 </fieldset>
 
 </body>
+
+
     <script>
         function limpatudo()
         {
